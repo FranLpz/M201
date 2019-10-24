@@ -1,0 +1,3 @@
+docker run --name M201 -d mongo 
+docker cp people.json M201:/tmp/people.json
+docker exec M201 mongoimport -d M201 --file /tmp/people.json
